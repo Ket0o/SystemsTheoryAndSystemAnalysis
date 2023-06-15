@@ -1,0 +1,404 @@
+KIT ;
+  IDL VERSION 1.2.8 ;
+  TITLE 'Музей ' ;
+  AUTHOR 'Вьюгин Кирилл Вадимович' ;
+  CREATION DATE 18/12/2022 ;
+  PROJECT NAME 'IDEF0_1' ;
+
+  MODEL 'IDEF0_1'
+    {LWI
+    F 0 -13 0 0 0 400
+      0 0 0 204 3 2 1 34
+      100 'Arial Narrow'
+    F 1 -24 0 0 0 400
+      0 0 0 204 3 2 1 34
+      180 'Arial Narrow'
+    F 2 -11 0 0 0 400
+      0 0 0 0 3 2 1 49
+      80 'Courier New'
+    F 3 -13 0 900 900 400
+      0 0 0 0 3 2 1 34
+      100 'Arial'
+    D 0 0 0 0 0 1 0 0 2
+    G 0 1
+    V '<CR>'
+    T 'WORKING'
+    R 77
+    M 0  }
+ ;
+    AUTHOR 'Вьюгин Кирилл Вадимович' ;
+    PROJECT NAME 'IDEF0_1' ;
+
+    DIAGRAM GRAPHIC A-0 ;
+      CREATION DATE 18/12/2022 ;
+      REVISION DATE 18/12/2022 ;
+      TITLE 'Музей ' ;
+      STATUS WORKING ;
+
+      BOX 0 ;
+        NAME '{LWI I 0 255 255 255}Музей<CR>' ;
+        BOX COORDINATES (0,30207;0,66667) (0,62669;0,34959) ;
+        DETAIL REFERENCE N A0 ;
+      ENDBOX ;
+
+      ARROWSEG 5 ;
+        SOURCE BORDER ;
+        PATH (0,01803;0,37398) (0,30207;0,37398) ;
+        LABEL '{LWI I 0 255 255 }документ<CR>отправки на<CR>реставрацию' ;
+        LABEL COORDINATES (0,01894;0,31220) ;
+        SINK TUNNEL  {LWI Q}BOX 0I1 ;
+      ENDSEG ;
+
+      ARROWSEG 1 ;
+        SOURCE BORDER ;
+        PATH (0,01803;0,43089) (0,30207;0,43089) ;
+        LABEL '{LWI I 0 255 255 }документ на возвращение с выставки' ;
+        LABEL COORDINATES (0,01713;0,41789) ;
+        SINK TUNNEL  {LWI Q}BOX 0I2 ;
+      ENDSEG ;
+
+      ARROWSEG 3 ;
+        SOURCE BORDER ;
+        PATH (0,01803;0,47967) (0,30207;0,47967) ;
+        LABEL '{LWI I 0 255 255 }Запрос о наличии экспоната' ;
+        LABEL COORDINATES (0,01803;0,46992) ;
+        SINK TUNNEL  {LWI Q}BOX 0I3 ;
+      ENDSEG ;
+
+      ARROWSEG 2 ;
+        SOURCE BORDER ;
+        PATH (0,01803;0,52846) (0,30207;0,52846) ;
+        LABEL '{LWI I 0 255 255 }Документ отправки на выставку' ;
+        LABEL COORDINATES (0,01894;0,51545) ;
+        SINK TUNNEL  {LWI Q}BOX 0I4 ;
+      ENDSEG ;
+
+      ARROWSEG 4 ;
+        SOURCE BORDER ;
+        PATH (0,01803;0,60976) (0,30207;0,60976) ;
+        LABEL '{LWI I 0 255 255 }Документ о возвращении с<CR>рестоврации' ;
+        LABEL COORDINATES (0,01713;0,57073) ;
+        SINK TUNNEL  {LWI Q}BOX 0I5 ;
+      ENDSEG ;
+
+      ARROWSEG 6 ;
+        SOURCE BORDER ;
+        PATH (0,37872;0,03252) (0,37872;0,34959) ;
+        LABEL '{LWI I 0 255 255 }инструкция' ;
+        LABEL COORDINATES (0,38593;0,18537) ;
+        SINK BOX 0C1 ;
+      ENDSEG ;
+
+      ARROWSEG 11 ;
+        SOURCE BORDER ;
+        PATH (0,48693;0,95935) (0,48693;0,66667) ;
+        LABEL '{LWI I 0 255 255 }информационная<CR>система музея' ;
+        LABEL COORDINATES (0,49414;0,80325) ;
+        SINK BOX 0M1 ;
+      ENDSEG ;
+
+      ARROWSEG 8 ;
+        SOURCE TUNNEL  {LWI Q}BOX 0O1 ;
+        PATH (0,62669;0,40650) (0,97836;0,40650) ;
+        LABEL '{LWI I 0 255 255 }Отчет о выставках' ;
+        LABEL COORDINATES (0,87827;0,39675) ;
+        SINK BORDER ;
+      ENDSEG ;
+
+      ARROWSEG 7 ;
+        SOURCE TUNNEL  {LWI Q}BOX 0O2 ;
+        PATH (0,62669;0,47154) (0,97836;0,47154) ;
+        LABEL '{LWI I 0 255 255 }Отчет об экспонатах' ;
+        LABEL COORDINATES (0,86564;0,45854) ;
+        SINK BORDER ;
+      ENDSEG ;
+
+      ARROWSEG 9 ;
+        SOURCE TUNNEL  {LWI Q}BOX 0O3 ;
+        PATH (0,62669;0,56911) (0,97836;0,56911) ;
+        LABEL '{LWI I 0 255 255 }Отчет о реставрации' ;
+        LABEL COORDINATES (0,86294;0,55610) ;
+        SINK BORDER ;
+      ENDSEG ;
+
+      ARROWSEG 10 ;
+        SOURCE TUNNEL  {LWI Q}BOX 0O4 ;
+        PATH (0,62669;0,64228) (0,97836;0,64228) ;
+        LABEL '{LWI I 0 255 255 }информация о наличии<CR>экспоната' ;
+        LABEL COORDINATES (0,83228;0,60650) ;
+        SINK BORDER ;
+      ENDSEG ;
+
+    ENDDIAGRAM ;
+
+    DIAGRAM GRAPHIC A0 ;
+      CREATION DATE 18/12/2022 ;
+      REVISION DATE 18/12/2022 ;
+      TITLE 'Музей ' ;
+      STATUS WORKING ;
+
+      BOX 1 ;
+        NAME '{LWI I 0 255 255 255}реставрация<CR>' ;
+        BOX COORDINATES (0,20739;0,36585) (0,37872;0,20325)  ;
+      ENDBOX ;
+
+      BOX 2 ;
+        NAME '{LWI I 0 255 255 255}отправка на выставку<CR>' ;
+        BOX COORDINATES (0,40577;0,56098) (0,57710;0,39837)  ;
+      ENDBOX ;
+
+      BOX 3 ;
+        NAME '{LWI I 0 255 255 255}учет экспонатов<CR>' ;
+        BOX COORDINATES (0,64022;0,79675) (0,81154;0,63415)  ;
+      ENDBOX ;
+
+      ARROWSEG 11 ;
+        SOURCE TUNNEL  {LWI Q}BORDER ;
+        PATH (0,01803;0,25203) (0,20739;0,25203) ;
+        LABEL '{LWI I 0 255 255 }документ отправки на реставрацию' ;
+        LABEL COORDINATES (0,03697;0,23740) ;
+        SINK BOX 1I1 ;
+      ENDSEG ;
+
+      ARROWSEG 3 ;
+        SOURCE TUNNEL  {LWI Q}BORDER ;
+        PATH (0,01803;0,30081) (0,20739;0,30081) ;
+        LABEL '{LWI I 0 255 255 }Документ о возвращении с рестоврации' ;
+        LABEL COORDINATES (0,01894;0,35122) ;
+        SINK BOX 1I2 ;
+      ENDSEG ;
+
+      ARROWSEG 4 ;
+        SOURCE TUNNEL  {LWI Q}BORDER ;
+        PATH (0,01803;0,43089) (0,40577;0,43089) ;
+        LABEL '{LWI I 0 255 255 }Документ отправки на выставку' ;
+        LABEL COORDINATES (0,04148;0,42114) ;
+        SINK BOX 2I1 ;
+      ENDSEG ;
+
+      ARROWSEG 5 ;
+        SOURCE TUNNEL  {LWI Q}BORDER ;
+        PATH (0,01803;0,52033) (0,40577;0,52033) ;
+        LABEL '{LWI I 0 255 255 }документ на возвращение с выставки' ;
+        LABEL COORDINATES (0,05050;0,50244) ;
+        SINK BOX 2I2 ;
+      ENDSEG ;
+
+      ARROWSEG 7 ;
+        SOURCE TUNNEL  {LWI Q}BORDER ;
+        PATH (0,01803;0,76423) (0,64022;0,76423) ;
+        LABEL '{LWI I 0 255 255 }Запрос о наличии экспоната' ;
+        LABEL COORDINATES (0,06763;0,75285) ;
+        SINK BOX 3I3 ;
+      ENDSEG ;
+
+      ARROWSEG 2 ;
+        SOURCE BORDER M1 (0,46438;0,98049) ;
+        PATH (0,47340;0,95935) (0,47340;0,91057) ;
+        LABEL 'информационная система музея' ;
+        SINK BRANCH 16 19 20 ;
+      ENDSEG ;
+
+      ARROWSEG 1 ;
+        SOURCE BORDER C1 (0,72588;0,02764) ;
+        PATH (0,73490;0,03252) (0,73490;0,06504) ;
+        LABEL 'инструкция' ;
+        SINK BRANCH 13 12 ;
+      ENDSEG ;
+
+      ARROWSEG 9 ;
+        SOURCE BOX 1O1 ;
+        PATH (0,37872;0,25203) (0,97836;0,25203) ;
+        LABEL '{LWI I 0 255 255 }Отчет о реставрации' ;
+        LABEL COORDINATES (0,85663;0,25041) ;
+        SINK TUNNEL  {LWI Q}BORDER ;
+      ENDSEG ;
+
+      ARROWSEG 8 ;
+        SOURCE BOX 1O2 ;
+        PATH (0,37872;0,28455) (0,58611;0,28455) (0,58611;0,69106) (0,64022;0,
+69106) ;
+        LABEL '{LWI I 0 255 255 }данные о реставрированном экспонате' ;
+        LABEL COORDINATES (0,59333;0,32358) ;
+        SINK BOX 3I1 ;
+      ENDSEG ;
+
+      ARROWSEG 17 ;
+        SOURCE BOX 2O1 ;
+        PATH (0,57710;0,45528) (0,97836;0,45528) ;
+        LABEL '{LWI I 0 255 255 }Отчет о выставках' ;
+        LABEL COORDINATES (0,86564;0,45366) ;
+        SINK TUNNEL  {LWI Q}BORDER ;
+      ENDSEG ;
+
+      ARROWSEG 15 ;
+        SOURCE BOX 2O2 ;
+        PATH (0,57710;0,50407) (0,60866;0,50407) (0,60866;0,73171) (0,64022;0,
+73171) ;
+        LABEL '{LWI I 0 255 255 }данные о выставочном экспонате' ;
+        LABEL COORDINATES (0,61587;0,57561) ;
+        SINK BOX 3I2 ;
+      ENDSEG ;
+
+      ARROWSEG 18 ;
+        SOURCE BOX 3O1 ;
+        PATH (0,81154;0,67480) (0,97836;0,67480) ;
+        LABEL '{LWI I 0 255 255 }информация о наличии экспоната' ;
+        LABEL COORDINATES (0,82507;0,64878) ;
+        SINK TUNNEL  {LWI Q}BORDER ;
+      ENDSEG ;
+
+      ARROWSEG 6 ;
+        SOURCE BOX 3O2 ;
+        PATH (0,81154;0,73984) (0,97836;0,73984) ;
+        LABEL '{LWI I 0 255 255 }Отчет об экспонатах' ;
+        LABEL COORDINATES (0,85663;0,73821) ;
+        SINK TUNNEL  {LWI Q}BORDER ;
+      ENDSEG ;
+
+      ARROWSEG 14 ;
+        SOURCE BRANCH 12 ;
+        PATH (0,48693;0,06504) (0,29306;0,06504) (0,29306;0,20325) ;
+        LABEL 'инструкция' ;
+        SINK BOX 1C1 ;
+      ENDSEG ;
+
+      ARROWSEG 12 ;
+        SOURCE BRANCH 1 ;
+        PATH (0,73490;0,06504) (0,48693;0,06504) ;
+        LABEL '{LWI I 0 255 255 }инструкция' ;
+        LABEL COORDINATES (0,75023;0,04228) ;
+        SINK BRANCH 14 10 ;
+      ENDSEG ;
+
+      ARROWSEG 19 ;
+        SOURCE BRANCH 2 ;
+        PATH (0,47340;0,91057) (0,73490;0,91057) (0,73490;0,79675) ;
+        LABEL 'информационная система музея' ;
+        SINK BOX 3M1 ;
+      ENDSEG ;
+
+      ARROWSEG 20 ;
+        SOURCE BRANCH 2 ;
+        PATH (0,47340;0,91057) (0,27502;0,91057) (0,27502;0,36585) ;
+        LABEL 'информационная система музея' ;
+        SINK BOX 1M1 ;
+      ENDSEG ;
+
+      ARROWSEG 16 ;
+        SOURCE BRANCH 2 ;
+        PATH (0,47340;0,91057) (0,47340;0,56098) ;
+        LABEL '{LWI I 0 255 255 }информационная система музея' ;
+        LABEL COORDINATES (0,48963;0,94634) ;
+        SINK BOX 2M1 ;
+      ENDSEG ;
+
+      ARROWSEG 10 ;
+        SOURCE BRANCH 12 ;
+        PATH (0,48693;0,06504) (0,48693;0,39837) ;
+        LABEL 'инструкция' ;
+        SINK BOX 2C1 ;
+      ENDSEG ;
+
+      ARROWSEG 13 ;
+        SOURCE BRANCH 1 ;
+        PATH (0,73490;0,06504) (0,73490;0,63415) ;
+        LABEL 'инструкция' ;
+        SINK BOX 3C1 ;
+      ENDSEG ;
+
+    ENDDIAGRAM ;
+
+    DIAGRAM GLOSSARY A0G {LWI A 
+      TERM 'Музей '
+      ''
+      S 'WORKING'
+      C 255 255 255
+      F 1.000000
+      TERM 'реставрация '
+      ''
+      S 'WORKING'
+      C 255 255 255
+      F 1.000000
+      TERM 'отправка на выставку '
+      ''
+      S 'WORKING'
+      C 255 255 255
+      F 1.000000
+      TERM 'учет экспонатов '
+      ''
+      S 'WORKING'
+      C 255 255 255
+      F 1.000000
+     ENDGLOSS } ;
+     GLOSSARY ;
+      TERM 'документ на возвращение с выставки'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Документ отправки на выставку'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Запрос о наличии экспоната'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Документ о возвращении с рестоврации'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'документ отправки на реставрацию'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'инструкция'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Отчет об экспонатах'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Отчет о выставках'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'Отчет о реставрации'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'информация о наличии экспоната'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'информационная система музея'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'данные о реставрированном экспонате'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+      TERM 'данные о выставочном экспонате'
+      ''
+      {LWI S 'WORKING'
+      C 255 255
+ } ;
+     ENDGLOSS ;
+    ENDDIAGRAM ;
+  ENDMODEL ;
+
+ENDKIT ;
